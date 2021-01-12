@@ -1,0 +1,6 @@
+secrets.yaml
+*.log
+tts/*
+blueprints/*
+.HA_VERSION
+.storage/*
