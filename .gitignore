@@ -5,3 +5,4 @@ blueprints/*
 .HA_VERSION
 .storage/*
 zones.yaml
+.ssh/*
