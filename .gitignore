@@ -4,3 +4,4 @@ tts/*
 blueprints/*
 .HA_VERSION
 .storage/*
+zones.yaml
