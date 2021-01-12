@@ -1,0 +1,99 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Use postgresql instead of sqlite for database
+recorder:
+  db_url: !secret postgres_url
+  auto_purge: true
+  purge_keep_days: 14
+
+influxdb:
+  api_version: 2
+  ssl: false
+  host: !secret influx_ip
+  port: !secret influx_port
+  token: !secret influx_api_token
+  organization: !secret influx_org
+  bucket: homeassistant
+  tags:
+    source: ha
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+  include:
+    domains:
+      - sensor
+      - climate
+
+light lightgroups:
+  - platform: group
+    name: Desk Overhead
+    entities:
+      - light.desk_overhead_1
+      - light.desk_overhead_2
+      
+  - platform: group
+    name: Main Bedroom Overhead
+    entities:
+      - light.bed_overhead_1
+      - light.bed_overhead_2
+      
+  - platform: group
+    name: Bedroom Overhead
+    entities:
+      - light.desk_overhead
+      - light.main_bedroom_overhead
+
+  - platform: group
+    name: Bedroom Lights
+    entities:
+      - light.desk_overhead
+      - light.main_bedroom_overhead
+      - light.desk_lamp
+      - light.bedside_table
+
+  - platform: group
+    name: Stairway Lights
+    entities:
+      - light.stairway_light_1
+      - light.stairway_light_2
+
+  - platform: group
+    name: Upstairs Lights
+    entities:
+      - light.bedroom_lights
+      - light.stairway_lights
+
+  - platform: group
+    name: Basement Lights
+    entities:
+      - light.alcohol_corner
+      - light.door_corner
+      - light.storage_corner
+      - light.washing_machine_corner
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
