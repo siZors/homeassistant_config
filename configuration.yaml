@@ -7,7 +7,7 @@ tts:
   - platform: google_translate
 
 group: !include groups.yaml
-automation: !include automations.yaml
+automation ui: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
@@ -35,6 +35,8 @@ influxdb:
     domains:
       - sensor
       - climate
+
+automation my_automations: !include_dir_merge_list automations/
 
 light lightgroups:
   - platform: group
@@ -82,19 +84,3 @@ light lightgroups:
       - light.door_corner
       - light.storage_corner
       - light.washing_machine_corner
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
