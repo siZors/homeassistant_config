@@ -3,12 +3,12 @@
   trigger:
   - platform: state
     entity_id: binary_sensor.basement_door
-    from: off
-    to: on
+    from: 'off'
+    to: 'on'
   condition: []
   action:
-  - service: turn_on
+  - service: light.turn_on
     entity_id: light.basement_lights
-    data:
-      brightness: 100
+    data_template: 
+      brightness_pct: 100
   mode: single
