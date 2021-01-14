@@ -6,3 +6,4 @@ blueprints/*
 .storage/*
 zones.yaml
 .ssh/*
+.vscode/*
