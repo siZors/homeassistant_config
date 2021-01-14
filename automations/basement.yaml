@@ -1,0 +1,13 @@
+- alias: basement_door_opens
+  description: Lights on when basement door opens
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.basement_door
+    from: off
+    to: on
+  condition: []
+  action:
+  - type: turn_on
+    entity_id: light.basement_lights
+    brightness_pct: 100
+  mode: single
