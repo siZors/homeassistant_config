@@ -37,6 +37,7 @@ influxdb:
       - climate
 
 automation my_automations: !include_dir_merge_list automations/
+scene my_scenes: !include_dir_merge_list scenes/
 
 light lightgroups:
   - platform: group

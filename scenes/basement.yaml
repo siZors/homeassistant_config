@@ -1,0 +1,8 @@
+- name: Basement Standby
+  entities:
+    light.alcohol_corner: "off"
+    light.door_corner:
+      state: "on"
+      brightness: 1
+    light.storage_corner: "off"
+    light.washing_machine_corner: "off"
