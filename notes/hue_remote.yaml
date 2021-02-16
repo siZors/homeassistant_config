@@ -1,0 +1,30 @@
+# Example payload:
+{
+  "event_type": "hue_event",
+  "data":
+    {
+      "id": "front_door_switch",
+      "unique_id": "00:17:88:01:08:74:c1:78-02-fc00",
+      "event": 1002,
+      "last_updated": "2021-02-15T16:33:42",
+    },
+  "origin": "LOCAL",
+  "time_fired": "2021-02-15T16:33:43.016320+00:00",
+  "context":
+    {
+      "id": "cde3384dd7e1a5e49debd15fd7bb0a3a",
+      "parent_id": null,
+      "user_id": null,
+    },
+}
+---
+Events:
+  On: 1002
+  Up: 2002
+  Down: 3002
+  Off: 4002
+---
+IDs:
+  Front Door:
+    id: "front_door_switch"
+    unique_id: "00:17:88:01:08:74:c1:78-02-fc00"

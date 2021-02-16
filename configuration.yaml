@@ -1,4 +1,3 @@
-
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -37,51 +36,14 @@ influxdb:
       - climate
 
 automation my_automations: !include_dir_merge_list automations/
+automation remotes: !include_dir_merge_list remotes/
 scene my_scenes: !include_dir_merge_list scenes/
+script my_scripts: !include_dir_merge_list scripts/
 
-light lightgroups:
-  - platform: group
-    name: Desk Overhead
-    entities:
-      - light.desk_overhead_1
-      - light.desk_overhead_2
-      
-  - platform: group
-    name: Main Bedroom Overhead
-    entities:
-      - light.bed_overhead_1
-      - light.bed_overhead_2
-      
-  - platform: group
-    name: Bedroom Overhead
-    entities:
-      - light.desk_overhead
-      - light.main_bedroom_overhead
+light lightgroups: !include_dir_merge_list lightgroups/
 
-  - platform: group
-    name: Bedroom Lights
-    entities:
-      - light.desk_overhead
-      - light.main_bedroom_overhead
-      - light.desk_lamp
-      - light.bedside_table
-
-  - platform: group
-    name: Stairway Lights
-    entities:
-      - light.stairway_light_1
-      - light.stairway_light_2
-
-  - platform: group
-    name: Upstairs Lights
-    entities:
-      - light.bedroom_lights
-      - light.stairway_lights
-
-  - platform: group
-    name: Basement Lights
-    entities:
-      - light.alcohol_corner
-      - light.door_corner
-      - light.storage_corner
-      - light.washing_machine_corner
+climate:
+  - platform: generic_thermostat
+    name: Bedroom Thermostat
+    heater: switch.bedroom_space_heater
+    target_sensor: sensor.bedroom_temperature

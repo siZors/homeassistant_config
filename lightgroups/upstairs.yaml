@@ -1,0 +1,11 @@
+- platform: group
+  name: Stairway Lights
+  entities:
+    - light.stairway_light_1
+    - light.stairway_light_2
+
+- platform: group
+  name: Upstairs Lights
+  entities:
+    - light.bedroom_lights
+    - light.stairway_lights

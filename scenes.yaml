@@ -1,0 +1,240 @@
+- id: '1612930565490'
+  name: Living Room - Night - Normal
+  entities:
+    light.couch_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 102
+      color_temp: 412
+      friendly_name: Couch Lamp
+      supported_features: 43
+      state: 'on'
+    light.sink_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 89
+      color_temp: 419
+      friendly_name: Sink Light
+      supported_features: 43
+      state: 'on'
+    light.table_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 179
+      color_temp: 371
+      friendly_name: Table Lamp
+      supported_features: 43
+      state: 'on'
+    light.kitchen_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.kitchen_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 2
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 2
+      supported_features: 43
+      state: 'off'
+    light.pantry_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 154
+      color_temp: 385
+      friendly_name: Pantry Light
+      supported_features: 43
+      state: 'on'
+- id: '1612931069768'
+  name: Living Room - Night - Low
+  entities:
+    light.table_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 102
+      color_temp: 413
+      friendly_name: Table Lamp
+      supported_features: 43
+      state: 'on'
+    light.sink_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 38
+      color_temp: 447
+      friendly_name: Sink Light
+      supported_features: 43
+      state: 'on'
+    light.couch_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 76
+      color_temp: 427
+      friendly_name: Couch Lamp
+      supported_features: 43
+      state: 'on'
+    light.pantry_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 51
+      color_temp: 441
+      friendly_name: Pantry Light
+      supported_features: 43
+      state: 'on'
+    light.kitchen_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.kitchen_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 2
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 2
+      supported_features: 43
+      state: 'off'
+- id: '1612931665038'
+  name: Living Room - Night - Bright
+  entities:
+    light.couch_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 255
+      color_temp: 333
+      friendly_name: Couch Lamp
+      supported_features: 43
+      state: 'on'
+    light.kitchen_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 128
+      color_temp: 344
+      friendly_name: Kitchen Overhead 1
+      supported_features: 43
+      state: 'on'
+    light.kitchen_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 128
+      color_temp: 344
+      friendly_name: Kitchen Overhead 2
+      supported_features: 43
+      state: 'on'
+    light.living_room_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 2
+      supported_features: 43
+      state: 'off'
+    light.table_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 255
+      color_temp: 333
+      friendly_name: Table Lamp
+      supported_features: 43
+      state: 'on'
+    light.pantry_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 255
+      color_temp: 333
+      friendly_name: Pantry Light
+      supported_features: 43
+      state: 'on'
+    light.sink_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 128
+      color_temp: 344
+      friendly_name: Sink Light
+      supported_features: 43
+      state: 'on'
+- id: '1613009379670'
+  name: Living Room - Night - mLow
+  entities:
+    light.couch_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 122
+      color_temp: 427
+      friendly_name: Couch Lamp
+      supported_features: 43
+      state: 'on'
+    light.pantry_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 51
+      color_temp: 441
+      friendly_name: Pantry Light
+      supported_features: 43
+      state: 'on'
+    light.table_lamp:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 141
+      color_temp: 413
+      friendly_name: Table Lamp
+      supported_features: 43
+      state: 'on'
+    light.sink_light:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 38
+      color_temp: 447
+      friendly_name: Sink Light
+      supported_features: 43
+      state: 'on'
+    light.kitchen_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.kitchen_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Kitchen Overhead 2
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_1:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 1
+      supported_features: 43
+      state: 'off'
+    light.living_room_overhead_2:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: Living Room Overhead 2
+      supported_features: 43
+      state: 'off'

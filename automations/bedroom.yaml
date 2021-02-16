@@ -1,0 +1,15 @@
+- alias: fuck_off_keep_blinds_open
+  description: Wake up dammit
+  trigger:
+    - platform: state
+      entity_id: cover.bedroom_shades
+      to: "closed"
+  condition:
+    - condition: time
+      after: "06:00:00"
+      before: "14:00:00"
+  action:
+    - service: cover.open_cover
+      entity_id: cover.bedroom_shades
+
+

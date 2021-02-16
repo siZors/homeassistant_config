@@ -1,54 +1,53 @@
 - alias: basement_door_opens
   description: Lights on when basement door opens
   trigger:
-  - platform: state
-    entity_id: binary_sensor.basement_door
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.basement_door
+      to: "on"
   action:
-  - service: light.turn_on
-    entity_id: light.basement_lights
-    data_template: 
-      brightness_pct: 100
+    - service: light.turn_on
+      entity_id: light.basement_lights
+      data_template:
+        brightness_pct: 100
   mode: single
 
 - alias: lights_on_with_motion
   description: Turn on lights when motion detected.
   trigger:
-  - platform: state
-    entity_id: binary_sensor.basement_motion
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.basement_motion
+      to: "on"
   action:
-  - service: light.turn_on
-    entity_id: light.basement_lights
-    data_template: 
-      brightness: 255
+    - service: light.turn_on
+      entity_id: light.basement_lights
+      data_template:
+        brightness: 255
   mode: single
 
 - alias: lights_off_without_motion
   description: Turn off lights without motion for ten minutes.
   trigger:
-  - platform: state
-    entity_id: binary_sensor.basement_motion
-    to: 'off'
-    for: '00:10:00'
+    - platform: state
+      entity_id: binary_sensor.basement_motion
+      to: "off"
+      for: "00:10:00"
   action:
-  - service: scene.turn_on
-    entity_id: scene.basement_standby
-    
+    - service: scene.turn_on
+      entity_id: scene.basement_standby
+
 - alias: lights_off_on_door_close
-  # Turns off lights after door close after 35 seconds unless motion is 
+  # Turns off lights after door close after 35 seconds unless motion is
   # detected, in which case keep the lights on.
   description: Turn off lights after door close
   trigger:
-  - platform: state
-    entity_id: binary_sensor.basement_door
-    to: 'off'
-    for: '00:00:35'
+    - platform: state
+      entity_id: binary_sensor.basement_door
+      to: "off"
+      for: "00:00:35"
   condition:
     - condition: state
       entity_id: binary_sensor.basement_motion
-      state: 'off'
+      state: "off"
   action:
-  - service: scene.turn_on
-    entity_id: scene.basement_standby
-    
+    - service: scene.turn_on
+      entity_id: scene.basement_standby

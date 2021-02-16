@@ -7,3 +7,5 @@ blueprints/*
 zones.yaml
 .ssh/*
 .vscode/*
+www/*
+custom_components/*

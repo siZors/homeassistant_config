@@ -1,0 +1,63 @@
+# Bedroom
+- id: "bedroom_humidifier_on"
+  alias: Bedroom Humidifier On
+  description: "Turn on bedroom humidifier when RH drops below 40%"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.bedroom_humidity_2
+      below: "40"
+      for: 00:0:02
+  condition: []
+  action:
+    - type: turn_on
+      device_id: 1432655afdd9891c9bdab285b1ab7b50
+      entity_id: switch.bedroom_humidifier
+      domain: switch
+  mode: single
+- id: "bedroom_humidifier_off"
+  alias: Bedroom Humidity Off
+  description: "Turn off bedroom humidifier when RH drops above 44%"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.bedroom_humidity_2
+      above: "44"
+      for: 00:04:00
+  condition: []
+  action:
+    - type: turn_off
+      device_id: 1432655afdd9891c9bdab285b1ab7b50
+      entity_id: switch.bedroom_humidifier
+      domain: switch
+  mode: single
+
+# Living Room
+- id: "living_room_humidifer_on"
+  alias: Living Room Humidifier On
+  description: "Turn on bedroom humidifier when RH drops below 40%"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.living_room_humidity
+      below: "40"
+      for: 00:0:02
+  condition: []
+  action:
+    - type: turn_on
+      device_id: 1432655afdd9891c9bdab285b1ab7b50
+      entity_id: switch.living_room_humidifier
+      domain: switch
+  mode: single
+- id: "living_room_humidifier_off"
+  alias: "Turn off bedroom humidifier when RH drops above 44%"
+  description: ""
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.living_room_humidity
+      above: "44"
+      for: 00:04:00
+  condition: []
+  action:
+    - type: turn_off
+      device_id: 1432655afdd9891c9bdab285b1ab7b50
+      entity_id: switch.living_room_humidifier
+      domain: switch
+  mode: single

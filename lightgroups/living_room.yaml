@@ -1,0 +1,32 @@
+- platform: group
+  name: Couch Overhead
+  entities:
+    - light.living_room_overhead_1
+    - light.living_room_overhead_2
+
+- platform: group
+  name: Kitchen Overhead
+  entities:
+    - light.kitchen_overhead_1
+    - light.kitchen_overhead_2
+
+- platform: group
+  name: All Downstairs Overhead
+  entities:
+    - light.couch_overhead
+    - light.kitchen_overhead
+
+- platform: group
+  name: Table and Couch
+  entities:
+    - light.table_lamp
+    - light.couch_lamp
+
+- platform: group
+  name: All Downstairs
+  entities:
+    - light.all_downstairs_overhead
+    - light.table_lamp
+    - light.couch_lamp
+    - light.sink_light
+    - light.pantry_light

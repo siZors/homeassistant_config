@@ -1,0 +1,9 @@
+- id: bedroom_door_remote_off_press
+  alias: Bedroom Remote Off Press
+  trigger:
+    - platform: state
+      entity_id: sensor.0x001788010874bf1b_action
+      to: "off-press"
+  condition: []
+  action:
+    - service: script.goodnight

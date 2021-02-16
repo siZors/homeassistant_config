@@ -1,0 +1,35 @@
+- id: stairway_motion_lights_up
+  alias: Stairway motion lights up
+  description: "Turn on stairway lights with motion, returning to previous state after."
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.stairway_occupancy
+      to: "on"
+  condition:
+    - condition: numeric_state
+      entity_id: light.stairway_lights
+      value_template: '{{ state.attributes.brightness }}'
+      below: 200
+  action:
+    - service: scene.create
+      data:
+        scene_id: stairway_before
+        snapshot_entities:
+          - light.stairway_light_1
+          - light.stairway_light_2
+    - service: light.turn_on
+      entity_id: light.stairway_lights
+      data:
+        brightness: 200
+- id: stairway_motion_light_off
+  alias: Stairway Motion Light Off
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.stairway_occupancy
+      to: "off"
+      for: 00:02:00
+  condition: []
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.stairway_before

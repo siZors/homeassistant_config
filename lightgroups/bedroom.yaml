@@ -1,0 +1,25 @@
+- platform: group
+  name: Desk Overhead
+  entities:
+    - light.desk_overhead_1
+    - light.desk_overhead_2
+
+- platform: group
+  name: Main Bedroom Overhead
+  entities:
+    - light.bed_overhead_1
+    - light.bed_overhead_2
+
+- platform: group
+  name: Bedroom Overhead
+  entities:
+    - light.desk_overhead
+    - light.main_bedroom_overhead
+
+- platform: group
+  name: Bedroom Lights
+  entities:
+    - light.desk_overhead
+    - light.main_bedroom_overhead
+    - light.desk_lamp
+    - light.bedside_table

@@ -1,0 +1,7 @@
+- platform: group
+  name: Basement Lights
+  entities:
+    - light.alcohol_corner
+    - light.door_corner
+    - light.storage_corner
+    - light.washing_machine_corner
