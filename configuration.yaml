@@ -5,11 +5,11 @@ default_config:
 tts:
   - platform: google_translate
 
-group ui: !include groups.yaml
-automation ui: !include automations.yaml
-script: !include scripts.yaml
-scene ui: !include scenes.yaml
-zone ui: !include zones.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+# script: !include scripts.yaml
+scene: !include scenes.yaml
+zone: !include zones.yaml
 
 # Use postgresql instead of sqlite for database
 recorder:
@@ -38,6 +38,7 @@ influxdb:
 automation my_automations: !include_dir_merge_list automations/
 automation remotes: !include_dir_merge_list remotes/
 scene my_scenes: !include_dir_merge_list scenes/
+script: !include_dir_merge_named scripts/
 
 light lightgroups: !include_dir_merge_list lightgroups/
 
