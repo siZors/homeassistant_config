@@ -1,0 +1,36 @@
+- id: "reset_morning_trigger"
+  description: "Reset morning input_bool at sunrise"
+  trigger:
+    - platform: sun
+      event: sunrise
+  condition: []
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.morning_started
+  mode: single
+
+- id: trigger_morning_routine
+  description: "Begin morning routine with motion in stairway"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.stairway_occupancy
+      to: "on"
+  condition:
+    - condition: state
+      entity_id: input_boolean.morning_started
+      state: "off"
+  action:
+    - service: script.goodmorning
+
+- id: morning_shades_up
+  trigger:
+    platform: time
+    at:
+      - "09:30:00"
+  condition: []
+  action:
+    - service: cover.set_cover_position
+      data:
+        position: 70
+      entity_id: cover.bedroom_shades
+  mode: single

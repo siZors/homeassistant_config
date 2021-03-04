@@ -1,0 +1,5 @@
+morning_started:
+  name: Morning has begun
+  # Trigger in the morning when the goodmorning
+  # routine has been run. Reset late at night to
+  # prepare for next morning.

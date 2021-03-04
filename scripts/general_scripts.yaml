@@ -6,6 +6,8 @@ goodnight:
       entity_id: light.all_downstairs
     - service: light.turn_off
       entity_id: light.stairway_lights
+    - service: cover.close_cover
+      entity_id: cover.bedroom_shades
   mode: single
   icon: mdi:sleep
 
